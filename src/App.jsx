@@ -7,7 +7,7 @@ import Navbar from './UiLayout/Navbar/index.jsx';
 import Footer from './UiLayout/Footer/index.jsx';
 import Pagination from './Components/Pagination/index.jsx';
 import About from './Pages/About/index.jsx';
-import MovieDetails from './Pages/MovieDetails/index.jsx';
+import MovieDetails from './Pages/MovieDetails';
 
 import {fetchPopularMovies,fetchUpcomingMovies,searchMovies} from './Services/Index.jsx';
 
