@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import useDebounce from "../../Hooks/usedebounce";
+import useDebounce from "../../Hooks/useDebounce";
 import "./index.scss";
 
 const Navbar = ({ onSearch }) => {
