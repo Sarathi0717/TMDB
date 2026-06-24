@@ -1,0 +1,18 @@
+.PopularMovies {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.PopularMovies h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #032541;
+  font-size: 32px;
+}
+
+.Card-mainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
