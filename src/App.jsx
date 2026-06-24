@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home';
-import Upcoming from './Pages/Upcoming';
-import PopularMovies from './Pages/Popular';
-import Navbar from './UiLayout/Navbar';
-import Footer from './UiLayout/Footer';
-import Pagination from './Components/Pagination';
-import About from './Pages/About';
-import MovieDetails from './Pages/MovieDetails';
+import Home from './Pages/Home/index';
+import Upcoming from './Pages/Upcoming/index';
+import PopularMovies from './Pages/Popular/index';
+import Navbar from './UiLayout/Navbar/index';
+import Footer from './UiLayout/Footer/index';
+import Pagination from './Components/Pagination/index';
+import About from './Pages/About/index';
+import MovieDetails from './Pages/MovieDetails/index';
 
 import {fetchPopularMovies,fetchUpcomingMovies,searchMovies} from './Services';
 

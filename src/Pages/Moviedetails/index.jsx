@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieDetails } from '../../Services';
+import { fetchMovieDetails } from '../../Services/index';
 
 import './index.scss';
 
