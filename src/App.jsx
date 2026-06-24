@@ -9,7 +9,7 @@ import Pagination from './Components/Pagination/index';
 import About from './Pages/About/index';
 import MovieDetails from './Pages/MovieDetails/index';
 
-import {fetchPopularMovies,fetchUpcomingMovies,searchMovies} from './Services';
+import {fetchPopularMovies,fetchUpcomingMovies,searchMovies} from './Services/Index';
 
 const App = () => {
   const [data, setData] = useState([]);

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieDetails } from '../../Services/index';
+import { fetchMovieDetails } from '../../Services/Index';
 
 import './index.scss';
 
@@ -8,6 +8,7 @@ const MovieDetails = () => {
   const { id } = useParams();
 
   const [movie, setMovie] = useState(null);
+  const[trailer,setTrailer] = useState("");
     const formatDate = (date) => {
     return date.split("-").reverse().join("-");
   };
@@ -40,6 +41,9 @@ const MovieDetails = () => {
           <strong>Overview:</strong>
         </p>
         <p>{movie.overview}</p>
+        <a href={trailer}target='_blank' rel='noopener noreferrer'>
+          <button className='trailer'> watch Trailer</button>
+        </a>
       </div>
     </div>
   );
