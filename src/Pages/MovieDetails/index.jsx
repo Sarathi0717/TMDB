@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieDetails, fetchMovieTrailer } from '../../Services/Index';
+import { fetchMovieDetails, fetchMovieTrailer,fetchMovieCast } from '../../Services/Index';
 import YouTube from 'react-youtube';
 import { Link } from 'react-router-dom';
 
@@ -44,6 +44,14 @@ const MovieDetails = () => {
       })
       .catch((err) => console.log(err));
   }, [id]);
+
+  useEffect (()=>{
+    fetchMovieCast(id)
+    .then((res)=>{
+      setCast(res.slice(0,10));
+    })
+  .catch((err)=> console.log(err));
+  },[id]);
 
   if (!movie) {
     return <h2>Loading...</h2>;
@@ -96,8 +104,23 @@ const MovieDetails = () => {
             />
           </div>
         )}
+
+         <div className='cast-section'>
+          <h1>CAST</h1>
+          <div className='cast-container'>
+            {cast.map((actor)=>(
+              <div key={actor.id} clasaName="cast-card" >
+                <img src={actor.profile_path ? `https://image.tmdb.org/t/p/w200${actor.profile_path}`  : 'https://via.placeholder.com/200x300?text=No+Image'} alt={actor.name} />
+                <h3> {actor.name} </h3>
+                <p> {actor.character} </p>
+              </div>
+            ))}
+          </div>
+
+         </div>
       </div>
     </div>
+
   );
 };
 

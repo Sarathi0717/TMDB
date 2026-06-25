@@ -8,6 +8,7 @@ import Footer from './UiLayout/Footer/index.jsx';
 import Pagination from './Components/Pagination/index.jsx';
 import About from './Pages/About/index.jsx';
 import MovieDetails from './Pages/MovieDetails/index';
+import Carousel from './Components/HeroCarousel';
 
 import {fetchPopularMovies,fetchUpcomingMovies,searchMovies} from './Services/Index.jsx';
 
