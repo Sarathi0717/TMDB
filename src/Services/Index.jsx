@@ -66,3 +66,13 @@ export async function fetchMovieCast(id) {
 
   return response.data.cast;
 }
+
+export const  fetchPersonDetails = async (id)=> {
+  const response = await axios.get(`${baseUrl}/person/${id}`, {
+    params: {
+      api_key,
+    },
+  });
+
+  return response.data;
+}

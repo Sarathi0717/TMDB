@@ -48,7 +48,7 @@ const MovieDetails = () => {
   useEffect (()=>{
     fetchMovieCast(id)
     .then((res)=>{
-      setCast(res.slice(0,10));
+      setCast(res.slice(0,7));
     })
   .catch((err)=> console.log(err));
   },[id]);
@@ -96,7 +96,7 @@ const MovieDetails = () => {
               videoId={videoKey}
               opts={{
                 width: '100%',
-                height: '400',
+                height: '150',
                 playerVars: {
                   autoplay: 1,
                 },
@@ -104,20 +104,33 @@ const MovieDetails = () => {
             />
           </div>
         )}
+<div className="cast-section">
+  <h1>CAST</h1>
 
-         <div className='cast-section'>
-          <h1>CAST</h1>
-          <div className='cast-container'>
-            {cast.map((actor)=>(
-              <div key={actor.id} clasaName="cast-card" >
-                <img src={actor.profile_path ? `https://image.tmdb.org/t/p/w200${actor.profile_path}`  : 'https://via.placeholder.com/200x300?text=No+Image'} alt={actor.name} />
-                <h3> {actor.name} </h3>
-                <p> {actor.character} </p>
-              </div>
-            ))}
-          </div>
+  <div className="cast-container">
+    {cast.map((actor) => (
+      <Link
+        key={actor.id}
+        to={`/person/${actor.id}`}
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        <div className="cast-card">
+          <img
+            src={
+              actor.profile_path
+                ? `https://image.tmdb.org/t/p/w200${actor.profile_path}`
+                : "https://via.placeholder.com/200x300?text=No+Image"
+            }
+            alt={actor.name}
+          />
 
-         </div>
+          <h3>{actor.name}</h3>
+          <p>{actor.character}</p>
+        </div>
+      </Link>
+    ))}
+  </div>
+</div>
       </div>
     </div>
 

@@ -9,6 +9,7 @@ import Pagination from './Components/Pagination/index.jsx';
 import About from './Pages/About/index.jsx';
 import MovieDetails from './Pages/MovieDetails/index';
 import Carousel from './Components/HeroCarousel';
+import CastDetails from './Pages/CastDetails/index.jsx';
 
 import {fetchPopularMovies,fetchUpcomingMovies,searchMovies} from './Services/Index.jsx';
 
@@ -23,7 +24,7 @@ const App = () => {
     fetchUpcomingMovies(currentPage)
       .then((res) => setUpcoming(res))
       .catch((err) => console.log(err));
-  }, [currentPage]);
+  }, [currentPage]);  
 
   const handleSearch = async (query) => {
     if (!query.trim()) {
@@ -89,8 +90,10 @@ const App = () => {
                 />
               </> 
             }/>
+             <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />}/>
           <Route path="/movie/:id" element={<MovieDetails />}/>
+           <Route path="/person/:id" element={<CastDetails />} />
         </Routes>
         <Footer />
       </div>

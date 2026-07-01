@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useDebounce from "../../Hooks/useDebounce";
+import { useNavigate } from "react-router-dom";
 import "./index.scss";
 
 const Navbar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const debounceSearch = useDebounce(searchTerm, 500);
+  const debounceSearch = useDebounce(searchTerm, 200);
 
   useEffect(() => {
     if (debounceSearch.trim()) {
@@ -15,9 +16,9 @@ const Navbar = ({ onSearch }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (searchTerm.trim()) {
       onSearch(searchTerm);
+      navigation("/")
     }
   };
 
