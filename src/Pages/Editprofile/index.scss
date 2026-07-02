@@ -1,0 +1,94 @@
+.edit-profile {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(
+      rgba(3, 37, 65, 0.9),
+      rgba(3, 37, 65, 0.95)
+    ),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.edit-card {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 18px;
+  padding: 40px 35px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+.edit-card h1 {
+  color: #01b4e4;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.edit-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.edit-card input {
+  width: 100%;
+  padding: 14px 16px;
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+
+  &::placeholder {
+    color: #9ca3af;
+  }
+
+  &:focus {
+    border-color: #01b4e4;
+    box-shadow: 0 0 8px rgba(1, 180, 228, 0.4);
+  }
+}
+
+.edit-card button {
+  margin-top: 10px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #01b4e4;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #0099c8;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+@media (max-width: 500px) {
+  .edit-card {
+    padding: 30px 20px;
+  }
+
+  .edit-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .edit-card input,
+  .edit-card button {
+    font-size: 14px;
+  }
+}

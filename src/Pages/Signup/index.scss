@@ -1,0 +1,119 @@
+.signup {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      rgba(3, 37, 65, 0.9),
+      rgba(3, 37, 65, 0.95)
+    ),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 430px;
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 18px;
+  padding: 40px 35px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+}
+
+.signup-card h1 {
+  color: #01b4e4;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.signup-card h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.signup-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.signup-card input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #3b3b3b;
+  border-radius: 10px;
+  background: #1f2937;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+
+  &::placeholder {
+    color: #9ca3af;
+  }
+
+  &:focus {
+    border-color: #01b4e4;
+    box-shadow: 0 0 8px rgba(1, 180, 228, 0.4);
+  }
+}
+
+.signup-card button {
+  margin-top: 10px;
+  padding: 14px;
+  background: #01b4e4;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    background: #0099c8;
+    transform: translateY(-2px);
+  }
+}
+
+.signup-card p {
+  margin-top: 25px;
+  color: #d1d5db;
+  font-size: 15px;
+}
+
+.signup-card a {
+  margin-left: 6px;
+  color: #01b4e4;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 30px 20px;
+  }
+
+  .signup-card h1 {
+    font-size: 1.7rem;
+  }
+
+  .signup-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .signup-card input,
+  .signup-card button {
+    font-size: 14px;
+  }
+}

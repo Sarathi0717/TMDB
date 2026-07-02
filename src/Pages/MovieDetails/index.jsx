@@ -96,7 +96,7 @@ const MovieDetails = () => {
               videoId={videoKey}
               opts={{
                 width: '100%',
-                height: '150',
+                height: '550',
                 playerVars: {
                   autoplay: 1,
                 },
